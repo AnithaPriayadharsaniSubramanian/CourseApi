@@ -29,7 +29,7 @@ public class TopicService {
     }
 
     public void removeTopic(String id) {
-        topics.remove(id);
+        topics.removeIf(t->t.getId().equals(id));
     }
 
     public void updateTopic(String id,Topic topic) {
